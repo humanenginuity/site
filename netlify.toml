@@ -1,5 +1,4 @@
 [build]
-#base    = "site"
-publish = "public"
-command = "jekyll"
+publish = "_site"
+command = "jekyll build"
 
