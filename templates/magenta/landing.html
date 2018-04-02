@@ -1,0 +1,90 @@
+---
+layout: default
+header_class: alt style2
+
+banner:
+  class: style2
+  image: /images/pic07.jpg
+  title: Landing
+  excerpt: Lorem ipsum dolor sit amet nullam consequat<br /> sed veroeros. tempus adipiscing nulla.
+
+spotlights:
+- image: /images/pic08.jpg
+  position: center center
+  title: Orci maecenas
+  excerpt: Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.
+  url: /generic.html
+  link_text: Learn more
+- image: /images/pic09.jpg
+  position: top center
+  title: Rhoncus magna
+  excerpt: Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.
+  url: /generic.html
+  link_text: Learn more
+- image: /images/pic10.jpg
+  position: 25% 25%
+  title: Sed nunc ligula
+  excerpt: Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.
+  url: /generic.html
+  link_text: Learn more
+
+---
+
+{% comment %}
+
+	Forty by Pixelarity
+	pixelarity.com | hello@pixelarity.com
+	License: pixelarity.com/license
+
+	Name:
+
+		Landing page
+
+	Description:
+
+		Alternative page design.
+		Use the "alt" header_class for the best effect.
+		The "styleN" banner.class should match that of header_class.
+
+	Example:
+
+		---
+		header_class: alt style2
+		banner:
+			class: style2
+		---
+
+{% endcomment %}
+
+{% include layout/banner.html banner=page.banner %}
+
+<!-- Main -->
+	<div id="main">
+
+		<!-- One -->
+			<section id="one">
+				<div class="inner">
+					<header class="major">
+						<h2>Sed amet aliquam</h2>
+					</header>
+					<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna.</p>
+				</div>
+			</section>
+
+		<!-- Two -->
+			{% include components/spotlights.html id="two" spotlights=page.spotlights %}
+
+		<!-- Three -->
+			<section id="three">
+				<div class="inner">
+					<header class="major">
+						<h2>Massa libero</h2>
+					</header>
+					<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus.</p>
+					<ul class="actions">
+						<li><a href="generic.html" class="button next">Get Started</a></li>
+					</ul>
+				</div>
+			</section>
+
+	</div>

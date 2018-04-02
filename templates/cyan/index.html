@@ -1,0 +1,77 @@
+---
+layout: default
+header_class: alt
+
+banner:
+  class: major
+  title: Hi, my name is Forty
+  excerpt: A aliquet diam aliquam integer at Cubilia<br /> sed aliquam lorem dis Egestas Commodo.
+  url: "#one"
+  link_text: Get Started
+
+tiles:
+- image: /images/pic01.jpg
+  url: /landing.html
+  title: Aliquam
+  excerpt: Ipsum dolor sit amet
+- image: /images/pic02.jpg
+  url: /landing.html
+  title: Tempus
+  excerpt: feugiat amet tempus
+- image: /images/pic03.jpg
+  url: /landing.html
+  title: Magna
+  excerpt: Lorem etiam nullam
+- image: /images/pic04.jpg
+  url: /landing.html
+  title: Ipsum
+  excerpt: Nisl sed aliquam
+- image: /images/pic05.jpg
+  url: /landing.html
+  title: Consequat
+  excerpt: Ipsum dolor sit amet
+- image: /images/pic06.jpg
+  url: /landing.html
+  title: Etiam
+  excerpt: Feugiat amet tempus
+
+---
+
+{% comment %}
+
+	Forty by Pixelarity
+	pixelarity.com | hello@pixelarity.com
+	License: pixelarity.com/license
+
+	Name:
+
+		Home page
+
+	Description:
+
+		Main page of the site
+
+{% endcomment %}
+
+{% include layout/banner.html banner=page.banner %}
+
+<!-- Main -->
+	<div id="main">
+
+		<!-- One -->
+			{% include components/tiles.html id="one" tiles=page.tiles %}
+
+		<!-- Two -->
+			<section id="two">
+				<div class="inner">
+					<header class="major">
+						<h2>Massa libero</h2>
+					</header>
+					<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus.</p>
+					<ul class="actions">
+						<li><a href="landing.html" class="button next">Get Started</a></li>
+					</ul>
+				</div>
+			</section>
+
+	</div>
