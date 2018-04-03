@@ -1843,7 +1843,7 @@
 				background-color: #ffffff;
 				display: block;
 				height: 2px;
-				margin: 0.325em 0 0.5em 0;
+				margin: 0.325em 0 2em 0;
 				width: 100%;
 			}
 
@@ -2255,16 +2255,31 @@
 	img.logo {
 		display: block;
 		border: 0;
-		margin: 0 auto 2rem auto;
+		margin: 0 auto 2em auto;
 		width: 33%;
 	}
 
 	p.logo {
 		text-align: center;
 		text-transform: uppercase;
-		letter-spacing: 0.2rem;
-		margin: 0 auto 6rem auto;
+		letter-spacing: 0.2em;
+		margin: 0 auto 3em auto;
 	}
+
+	.subtitle {
+		text-align: center;
+		margin: 0em auto 2em auto;
+	}
+
+	p.subtitle {
+		font-size: 150%;
+		margin: 1.5em auto 2em;
+	}
+
+	.learn-more {
+		margin: 0 0 2em 0;
+	}
+
 /* List */
 
 	ol {
@@ -3510,7 +3525,7 @@
 
 				#banner > .inner .content > * {
 					margin-left: 1.5em;
-					margin-bottom: 0;
+					margin-bottom: 3em;
 				}
 
 				#banner > .inner .content > :first-child {
@@ -3527,7 +3542,7 @@
 		#banner.major {
 			height: 75vh;
 			min-height: 30em;
-			max-height: 50em;
+			max-height: 60em;
 		}
 
 			#banner.major.alt {
