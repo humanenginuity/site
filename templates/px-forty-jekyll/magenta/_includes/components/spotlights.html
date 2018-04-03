@@ -1,0 +1,63 @@
+{% comment %}
+
+	Forty by Pixelarity
+	pixelarity.com | hello@pixelarity.com
+	License: pixelarity.com/license
+
+	Name:
+
+		Spotlights
+
+	Description:
+
+		Generates a spotlight grid from an array passed as context. Can also
+		generate the spotlights from blog posts by passing site.posts as the array.
+
+		Also accepts an optional "id" param to use as the id attribute.
+
+	Example:
+
+		---
+		my_spotlights_array:
+		- image: /images/tile1.jpg
+			position: center center
+			url: http://example.com
+			title: Spotlight title 1
+			excerpt: Spotlight content 1.
+			link_text: Custom link text
+		- image: /images/tile2.jpg
+			position: center top
+			url: http://example.com
+			title: Spotlight title 2
+			excerpt: Spotlight content 2.
+		---
+
+		{% include layout/spotlights.html id="my-spotlights" spotlights=page.my_spotlights_array %}
+
+{% endcomment %}
+
+<!-- Spotlights -->
+	<section id="{{ include.id }}" class="spotlights">
+
+		{% for spotlight in include.spotlights %}
+
+			<section>
+				<a href="{{ spotlight.url }}" class="image">
+					<img src="{{ site.baseurl }}{{ spotlight.image }}" alt="" data-position="{{ spotlight.position | default: 'center center' }}" />
+				</a>
+				<div class="content">
+					<div class="inner">
+						<header class="major">
+							<h3>{{ spotlight.title }}</h3>
+						</header>
+						<p>{{ spotlight.excerpt | remove: "<p>" | remove: "</p>" }}</p>
+						<ul class="actions">
+							<li><a href="{{ spotlight.url }}" class="button">{{ spotlight.link_text | default: "Read More" }}</a></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+		{% endfor %}
+
+	</section>
