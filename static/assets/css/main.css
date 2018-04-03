@@ -2252,6 +2252,19 @@
 
 			}
 
+	img.logo {
+		display: block;
+		border: 0;
+		margin: 0 auto 2rem auto;
+		width: 33%;
+	}
+
+	p.logo {
+		text-align: center;
+		text-transform: uppercase;
+		letter-spacing: 0.2rem;
+		margin: 0 auto 6rem auto;
+	}
 /* List */
 
 	ol {
@@ -3204,6 +3217,7 @@
 			line-height: inherit;
 		}
 
+		height: 3.25em;
 			#header nav a {
 				border: 0;
 				display: block;
@@ -3986,3 +4000,4 @@
 			opacity: 1;
 			visibility: visible;
 		}
+		height: 3.25em;
