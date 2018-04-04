@@ -2,19 +2,41 @@ function empty(x) { return x; }
 
 function setup(sugar) {
   return sugar
+    // Setup
     .use("metalsmith-metadata", {
       site: "_data/site.yaml",
     })
-    .use("metalsmith-static", { src: "static", dest: "." })
-    .use("metalsmith-page-titles")
+    .use("metalsmith-filenames")
     .use("metalsmith-collections", {
       team: {
         pattern: "team/*.md",
         sort: "name"
+      },
+      tiles: {
+        pattern: "landing-tiles/*.md",
+        sortBy: "filename"
+      },
+    })
+    .use("metalsmith-page-titles")
+    // Render
+    .use("metalsmith-static", { src: "static", dest: "." })
+    .use("metalsmith-markdown-it")
+    .use("metalsmith-permalinks", {
+      relative: false,
+      linksets: [
+        {
+          match: { collection: "tiles" },
+          pattern: ":title",
+        },
+      ],
+    })
+    .use("metalsmith-layouts", {
+      pattern: "**/*.html",
+      default: "generic.pug",
+      engineOptions: {
+        basedir: "layouts"
       }
     })
-    .use("metalsmith-filenames")
-    .use("metalsmith-markdown-it")
     .use("metalsmith-in-place", {
       engineOptions: {
         basedir: "layouts",
@@ -30,11 +52,8 @@ function setup(sugar) {
       }
     })
     .use("metalsmith-ignore", [
-      "team/*"
-    ])
-    .use("metalsmith-permalinks", {
-      relative: false,
-    });
+      "team/**/*",
+    ]);
 }
 
 module.exports = function(before, after) {

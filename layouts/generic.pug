@@ -1,0 +1,22 @@
+extends /page.pug
+
+block main
+  #main.alt
+    section#one
+      .inner
+        header.major
+          h1= title
+
+        if image
+          span.main.image
+            img(src=image alt)
+
+        block content
+          != contents
+
+        if next
+          ul.actions
+            if next
+              li
+                a.button.next(href="/" + next.path)= next.title
+

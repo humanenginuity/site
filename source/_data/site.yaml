@@ -1,15 +1,3 @@
 title: "Human Enginuity"
 email: "hello@humanenginuity.com"
-tiles:
-  - title: Ship Early
-    text: "Shipping quickly does not have to mean sacrificing quality..."
-  - title: Ship Often
-    text: "Using modified agile methodologies, we deploy quality code with a regular, rapid cadence for visible, steady progress toward goals..."
-  - title: Ship It Right
-    text: "Shipping early and often, well ahead of the final deadline means stakeholders have the opportunity to make course corrections early..."
-  - title: Ship Securely
-    text: "We use best practices and extensive testing to make sure that your software is at a low-risk for security issues..."
-  - title: Ship Confidence
-    text: "Using automated tests we prevent regressions so if it worked before it will work again..."
-  - title: Ship Team Growth
-    text: "We will also work with your teams to teach them how to avoid the classic traps which rob them and the organization of productivity..."
+tile_links: true

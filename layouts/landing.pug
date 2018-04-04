@@ -17,7 +17,7 @@ block banner
 block main
   #main
     section#one.tiles
-      each tile in site.tiles
+      each tile in tiles
         article
           if tile.image
             span.image
@@ -25,7 +25,9 @@ block main
           header.major
             h3= tile.title
             p
-              :markdown-it= tile.text
+              :markdown-it= tile.excerpt
+          if site.tile_links
+            a.link.primary(href=tile.path)
 
     section#two
       .inner
