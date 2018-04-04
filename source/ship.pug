@@ -3,9 +3,9 @@
 extends /page.pug
 
 block main
-  #main.alt
+  #main.alt.ship
     each tile in tiles
-      section.chunked(id=tile.slug)
+      section(id=tile.slug)
         .inner
           header.major
             h1= tile.title

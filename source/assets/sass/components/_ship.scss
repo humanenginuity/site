@@ -1,0 +1,25 @@
+.ship {
+    section:nth-child(6n - 5) {
+        background-color: _palette(accent1);
+    }
+
+    section:nth-child(6n - 4) {
+        background-color: _palette(accent2);
+    }
+
+    section:nth-child(6n - 3) {
+        background-color: _palette(accent3);
+    }
+
+    section:nth-child(6n - 2) {
+        background-color: _palette(accent4);
+    }
+
+    section:nth-child(6n - 1) {
+        background-color: _palette(accent5);
+    }
+
+    section:nth-child(6n) {
+        background-color: _palette(accent6);
+    }
+}
