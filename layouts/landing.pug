@@ -1,0 +1,37 @@
+extends /page.pug
+
+block banner
+  section#banner.major
+    .inner
+      header.major
+        div
+          img.logo(src="images/he_logo_text_rw_vert.svg" alt="Human Enginuity logo")
+          p.logo.major Technology Services
+          p
+      .subtitle
+        p.subtitle
+          | Software Designed to
+          strong Ship
+          | .
+        .learn-more
+          ul.actions
+            li
+              a.button.next.scrolly(href="#one") Learn more
+
+block main
+  section#one.tiles
+    each tile in site.tiles
+      article
+        if tile.image
+          span.image
+            img(src=tile.image alt=tile.title)
+        header.major
+          h3
+            a.link(href="#")= tile.title
+        p= tile.text
+
+  section#two
+    .inner
+      block content
+
+

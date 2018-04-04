@@ -3,7 +3,7 @@ function before(sugar) {
     .use("metalsmith-express")
     .use("metalsmith-watch", {
       paths: {
-        '${source}/**/*': true
+        '${source}/**/*': true,
       },
       livereload: true
     });

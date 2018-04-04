@@ -2,19 +2,30 @@ function empty(x) { return x; }
 
 function setup(sugar) {
   return sugar
-    .use("metalsmith-metadata", { site: "site.json" })
-    .use("metalsmith-static", { source: "static", destination: "." })
+    .use("metalsmith-metadata", {
+      site: "_data/site.yaml",
+    })
+    .use("metalsmith-static", { src: "static", dest: "." })
     .use("metalsmith-page-titles")
     .use("metalsmith-collections", {
-      team: {
-        pattern: "team/*.md",
-        sort: "title"
+      tiles: {
+        pattern: "tiles/*.md",
+        sort: "rank"
       }
     })
     .use("metalsmith-filenames")
     .use("metalsmith-in-place", {
       engineOptions: {
-        basedir: "layouts"
+        basedir: "layouts",
+        pretty: true,
+      }
+    })
+    .use("metalsmith-sass", {
+      sourceMap: true,
+      sourceMapContents: true,
+      outputDir: function(originalPath) {
+        // this will change scss/some/path to css/some/path
+        return originalPath.replace("sass", "css");
       }
     })
     .use("metalsmith-permalinks");
