@@ -25,11 +25,13 @@
 				display: block;
 				position: relative;
 				width: 30%;
+				@include vendor('display', 'flex');
+				@include vendor('align-items', 'center');
+				@include vendor('justify-content', 'center');
 
 				img {
 					border-radius: 0;
 					display: block;
-					width: 100%;
 				}
 
 				&:before {

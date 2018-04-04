@@ -10,10 +10,11 @@ function setup(sugar) {
     .use("metalsmith-collections", {
       team: {
         pattern: "team/*.md",
-        sort: "rank"
+        sort: "name"
       }
     })
     .use("metalsmith-filenames")
+    .use("metalsmith-markdown-it")
     .use("metalsmith-in-place", {
       engineOptions: {
         basedir: "layouts",

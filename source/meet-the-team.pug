@@ -1,0 +1,29 @@
+---
+title: Meet the Team
+---
+extends /page.pug
+
+block content
+  section#one
+    .inner
+      header.major
+        h1 Meet the Team
+
+  section#two.spotlights
+    each member in collections.team
+      section
+        span.image
+          img(src="/images/headshots/"+member.image alt=member.name)
+        .content
+          .inner
+            header.major
+              h3= member.name
+            if member.social
+              ul.icons
+                each social in member.social
+                  li
+                    a.icon.alt(href=social.link, class=social.icon)
+                      span.label= social.name
+
+
+            != member.contents
