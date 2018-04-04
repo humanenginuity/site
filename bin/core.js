@@ -29,7 +29,12 @@ function setup(sugar) {
         return originalPath.replace("sass", "css");
       }
     })
-    .use("metalsmith-permalinks");
+    .use("metalsmith-ignore", [
+      "team/*"
+    ])
+    .use("metalsmith-permalinks", {
+      relative: false,
+    });
 }
 
 module.exports = function(before, after) {

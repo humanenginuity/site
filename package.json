@@ -9,6 +9,7 @@
     "metalsmith-debug-ui": "^0.3.0",
     "metalsmith-express": "^0.1.0",
     "metalsmith-filenames": "^1.0.0",
+    "metalsmith-ignore": "^0.1.2",
     "metalsmith-in-place": "^4.1.1",
     "metalsmith-layouts": "^2.1.0",
     "metalsmith-markdown-it": "^0.0.2",
