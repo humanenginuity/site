@@ -1,5 +1,7 @@
 extends /page.pug
 
+block header
+
 block banner
   section#banner.major
     .inner
@@ -11,10 +13,6 @@ block banner
       .subtitle
         p.subtitle
           :markdown-it Software Designed to **Ship**.
-        .learn-more
-          ul.actions
-            li
-              a.button.next.scrolly(href="#one") Learn more
 
 block main
   #main
