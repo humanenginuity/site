@@ -8,8 +8,8 @@ function setup(sugar) {
     .use("metalsmith-static", { src: "static", dest: "." })
     .use("metalsmith-page-titles")
     .use("metalsmith-collections", {
-      tiles: {
-        pattern: "tiles/*.md",
+      team: {
+        pattern: "team/*.md",
         sort: "rank"
       }
     })

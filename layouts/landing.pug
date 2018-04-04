@@ -7,12 +7,10 @@ block banner
         div
           img.logo(src="images/he_logo_text_rw_vert.svg" alt="Human Enginuity logo")
           p.logo.major Technology Services
-          p
+
       .subtitle
         p.subtitle
-          | Software Designed to
-          strong Ship
-          | .
+          :markdown-it Software Designed to **Ship**.
         .learn-more
           ul.actions
             li
@@ -28,7 +26,8 @@ block main
         header.major
           h3
             a.link(href="#")= tile.title
-        p= tile.text
+          p
+            :markdown-it= tile.text
 
   section#two
     .inner
