@@ -11,17 +11,21 @@ html(lang="en")
 
     block css
       //if lte IE 8
-        script(src="assets/js/ie/html5shiv.js")
-      link(rel="stylesheet" href="assets/css/main.css")
+        script(src="/assets/js/ie/html5shiv.js")
+      link(rel="stylesheet" href="/assets/css/main.css")
       //if lte IE 9
-        link(rel="stylesheet" href="assets/css/ie9.css")
+        link(rel="stylesheet" href="/assets/css/ie9.css")
       //if lte IE 8
-        link(rel="stylesheet" href="assets/css/ie8.css")
+        link(rel="stylesheet" href="/assets/css/ie8.css")
 
   body
     block body
       #wrapper
         block header
+          header#header
+            a.logo(href="/")
+              img(src="/images/he_logo_text_rw_horiz.svg" alt="Human Enginuity")
+
         block menu
         block banner
         block main
@@ -57,11 +61,11 @@ html(lang="en")
         block footer
 
     block scripts
-      script(src="assets/js/jquery.min.js")
-      script(src="assets/js/jquery.scrolly.min.js")
-      script(src="assets/js/jquery.scrollex.min.js")
-      script(src="assets/js/skel.min.js")
-      script(src="assets/js/util.js")
+      script(src="/assets/js/jquery.min.js")
+      script(src="/assets/js/jquery.scrolly.min.js")
+      script(src="/assets/js/jquery.scrollex.min.js")
+      script(src="/assets/js/skel.min.js")
+      script(src="/assets/js/util.js")
       //if lte IE 8
-        script(src="assets/js/ie/respond.min.js")
-      script(src="assets/js/main.js")
+        script(src="/assets/js/ie/respond.min.js")
+      script(src="/assets/js/main.js")
