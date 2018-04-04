@@ -17,20 +17,20 @@ block banner
               a.button.next.scrolly(href="#one") Learn more
 
 block main
-  section#one.tiles
-    each tile in site.tiles
-      article
-        if tile.image
-          span.image
-            img(src=tile.image alt=tile.title)
-        header.major
-          h3
-            a.link(href="#")= tile.title
-          p
-            :markdown-it= tile.text
+  #main
+    section#one.tiles
+      each tile in site.tiles
+        article
+          if tile.image
+            span.image
+              img(src=tile.image alt=tile.title)
+          header.major
+            h3= tile.title
+            p
+              :markdown-it= tile.text
 
-  section#two
-    .inner
-      block content
+    section#two
+      .inner
+        block content
 
 

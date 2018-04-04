@@ -102,10 +102,21 @@
 				opacity: 0;
 			}
 
-			&:nth-child(4n - 1),
-			&:nth-child(4n - 2) {
-				width: 60%;
+			&:nth-child(6n - 5),
+			&:nth-child(6n - 0) {
+				width: 45%;
 			}
+
+			&:nth-child(6n - 4),
+			&:nth-child(6n - 1) {
+				width: 30%;
+			}
+
+			&:nth-child(6n - 3),
+			&:nth-child(6n - 2) {
+				width: 25%;
+			}
+
 
 			&:nth-child(6n - 5) {
 				&:before {

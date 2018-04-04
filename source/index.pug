@@ -1,8 +1,18 @@
 ---
 title: testing!
 ---
-
 extends /landing.pug
 
 block content
-  .main Hello there
+  :markdown-it
+    ## About Us
+
+    We are a group of highly experienced, multidisciplinary professionals who speak the languages
+    of business _and_ technology.
+
+    Are you tired of shipping brittle code and the ever-increasing effort to get features
+    out the door with each release?  (So were we.  And that's why we're different.)
+
+  ul.actions
+    li
+      a.button.next(href="/meet-the-team/") Meet the Team

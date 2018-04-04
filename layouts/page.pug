@@ -25,9 +25,35 @@ html(lang="en")
         block menu
         block banner
         block main
-          block content
-            != contents
+          #main
+            block content
+              != contents
         block contact
+          section#contact
+            .inner
+              section
+                form(method="post" netlify action="#")
+                  .field.half.first
+                    label(for="name") Name
+                    input#name(type="text" name="name")
+                  .field.half
+                    label(for="email") Email
+                    input#email(type="text" name="email")
+                  .field
+                    label(for="message") Message
+                    textarea#message(name="message" rows="6")
+                  ul.actions
+                    li
+                      input.special(type="submit" value="Send Message")
+                    li
+                      input(type="reset" value="Clear")
+              section.split
+                section
+                  .contact-method
+                    span.icon.alt.fa-envelope
+                    h3 Email
+                    a(href="mailto:hello@humanenginuity.com") hello@humanenginuity.com
+
         block footer
 
     block scripts
