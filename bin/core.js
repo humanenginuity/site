@@ -18,25 +18,13 @@ function setup(sugar) {
       },
     })
     .use("metalsmith-page-titles")
+    .use("metalsmith-slug", {
+      patterns: [ "*.md" ],
+      mode: "rfc3986",
+    })
     // Render
     .use("metalsmith-static", { src: "static", dest: "." })
     .use("metalsmith-markdown-it")
-    .use("metalsmith-permalinks", {
-      relative: false,
-      linksets: [
-        {
-          match: { collection: "tiles" },
-          pattern: ":title",
-        },
-      ],
-    })
-    .use("metalsmith-layouts", {
-      pattern: "**/*.html",
-      default: "generic.pug",
-      engineOptions: {
-        basedir: "layouts"
-      }
-    })
     .use("metalsmith-in-place", {
       engineOptions: {
         basedir: "layouts",
@@ -53,7 +41,12 @@ function setup(sugar) {
     })
     .use("metalsmith-ignore", [
       "team/**/*",
-    ]);
+      "landing-tiles/**/*",
+    ])
+    .use("metalsmith-permalinks", {
+      relative: false,
+    })
+    ;
 }
 
 module.exports = function(before, after) {
@@ -65,8 +58,6 @@ module.exports = function(before, after) {
     destination: "_site",
     source: "source",
   });
-
-  require("metalsmith-debug-ui").patch(sugar.metalsmith());
 
   after(setup(before(sugar))).build();
 }

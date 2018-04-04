@@ -1,0 +1,18 @@
+---
+---
+extends /page.pug
+
+block main
+  #main.alt
+    each tile in tiles
+      section.chunked(id=tile.slug)
+        .inner
+          header.major
+            h1= tile.title
+
+          if tile.image
+            span.main.image
+              img(src=tile.image alt)
+
+          block content
+            != tile.content

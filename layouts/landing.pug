@@ -27,7 +27,7 @@ block main
             p
               :markdown-it= tile.excerpt
           if site.tile_links
-            a.link.primary(href=tile.path)
+            a.link.primary(href="/ship/#" + tile.slug)
 
     section#two
       .inner

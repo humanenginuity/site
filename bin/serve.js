@@ -1,4 +1,7 @@
 function before(sugar) {
+
+  require("metalsmith-debug-ui").patch(sugar.metalsmith());
+  
   return sugar
     .use("metalsmith-express")
     .use("metalsmith-watch", {

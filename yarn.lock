@@ -251,7 +251,7 @@ boom@5.x.x:
   dependencies:
     hoek "4.x.x"
 
-brace-expansion@^1.1.7:
+brace-expansion@^1.0.0, brace-expansion@^1.1.7:
   version "1.1.11"
   resolved "https://registry.yarnpkg.com/brace-expansion/-/brace-expansion-1.1.11.tgz#3c7fcbf529d87226f3d2f52b966ff5271eb441dd"
   dependencies:
@@ -1405,16 +1405,6 @@ metalsmith-in-place@^4.1.1:
     jstransformer "^1.0.0"
     multimatch "^2.1.0"
 
-metalsmith-layouts@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/metalsmith-layouts/-/metalsmith-layouts-2.1.0.tgz#523ce8778795a1fffd3390fa4a88e27911b47846"
-  dependencies:
-    debug "^3.1.0"
-    inputformat-to-jstransformer "^1.2.1"
-    is-utf8 "^0.2.1"
-    jstransformer "^1.0.0"
-    multimatch "^2.1.0"
-
 metalsmith-markdown-it@^0.0.2:
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/metalsmith-markdown-it/-/metalsmith-markdown-it-0.0.2.tgz#7224e8dd21b3789a0684bc577a3ad317bd2eaebd"
@@ -1449,6 +1439,13 @@ metalsmith-sass@^1.5.1:
   dependencies:
     async "^2.6.0"
     node-sass "^4.7.2"
+
+metalsmith-slug@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/metalsmith-slug/-/metalsmith-slug-0.2.1.tgz#90f73c240e4516274b1fe2aa3db7bcc8c7909f7f"
+  dependencies:
+    minimatch "2.x"
+    slug "0.9.x"
 
 metalsmith-static@^0.0.5:
   version "0.0.5"
@@ -1538,6 +1535,12 @@ mime@1.4.1:
   resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-3.0.4.tgz#5166e286457f03306064be5497e8dbb0c3d32083"
   dependencies:
     brace-expansion "^1.1.7"
+
+minimatch@2.x:
+  version "2.0.10"
+  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-2.0.10.tgz#8d087c39c6b38c001b97fca7ce6d0e1e80afbac7"
+  dependencies:
+    brace-expansion "^1.0.0"
 
 minimatch@~0.2.14:
   version "0.2.14"
@@ -2146,6 +2149,12 @@ slug-component@~1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/slug-component/-/slug-component-1.1.0.tgz#224290a04591bf9ac08b9c622d3a14f43e3a0df7"
 
+slug@0.9.x:
+  version "0.9.1"
+  resolved "https://registry.yarnpkg.com/slug/-/slug-0.9.1.tgz#af08f608a7c11516b61778aa800dce84c518cfda"
+  dependencies:
+    unicode ">= 0.3.1"
+
 sntp@1.x.x:
   version "1.0.9"
   resolved "https://registry.yarnpkg.com/sntp/-/sntp-1.0.9.tgz#6541184cc90aeea6c6e7b35e2659082443c66198"
@@ -2371,6 +2380,10 @@ uglify-js@^2.6.1:
 uglify-to-browserify@~1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/uglify-to-browserify/-/uglify-to-browserify-1.0.2.tgz#6e0924d6bda6b5afe349e39a6d632850a0f882b7"
+
+"unicode@>= 0.3.1":
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/unicode/-/unicode-10.0.0.tgz#e5d51c1db93b6c71a0b879e0b0c4af7e6fdf688e"
 
 uniq@^1.0.1:
   version "1.0.1"
