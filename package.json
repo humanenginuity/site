@@ -20,6 +20,7 @@
     "metalsmith-static": "^0.0.5",
     "metalsmith-sugar": "^1.1.0",
     "metalsmith-timer": "^0.0.2",
+    "metalsmith-uglify": "^2.2.0",
     "metalsmith-watch": "^1.0.3"
   },
   "scripts": {

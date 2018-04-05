@@ -1,7 +1,16 @@
 function empty(x) { return x; }
 
-function setup(sugar) {
-  return sugar
+function setup(opts, sugar) {
+
+  if (opts.debug) {
+    require("metalsmith-debug-ui").patch(sugar.metalsmith());
+    sugar.use(function (files, metalsmith, done) {
+      setImmediate(done);
+      metalsmith.metadata({ debug: true });
+    })
+  }
+
+  sugar = opts.before(sugar)
     // Setup
     .use("metalsmith-metadata", {
       site: "_data/site.yaml",
@@ -28,7 +37,7 @@ function setup(sugar) {
     .use("metalsmith-in-place", {
       engineOptions: {
         basedir: "layouts",
-        pretty: true,
+        pretty: opts.debug,
       }
     })
     .use("metalsmith-sass", {
@@ -46,12 +55,32 @@ function setup(sugar) {
     .use("metalsmith-permalinks", {
       relative: false,
     })
+    .use("metalsmith-uglify", {
+      files: [
+        "assets/js/jquery.scrolly.min.js",
+        "assets/js/jquery.scrollex.min.js",
+        "assets/js/skel.min.js",
+        "assets/js/util.js",
+        "assets/js/main.js",
+      ],
+      concat: {
+        root: "assets/"
+      },
+      removeOriginal: true,
+    })
     ;
+
+    return opts.after(sugar)
 }
 
-module.exports = function(before, after) {
-  before = before || empty;
-  after = after || empty;
+var defaults = {
+  before: empty,
+  after: empty,
+  debug: false,
+}
+
+module.exports = function(opts) {
+  opts = Object.assign({}, defaults, opts);
 
   var sugar = require("metalsmith-sugar")({
     clean: true,
@@ -59,5 +88,5 @@ module.exports = function(before, after) {
     source: "source",
   });
 
-  after(setup(before(sugar))).build();
+  setup(opts, sugar).build();
 }

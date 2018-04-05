@@ -61,11 +61,8 @@ html(lang="en")
         block footer
 
     block scripts
-      script(src="/assets/js/jquery.min.js")
-      script(src="/assets/js/jquery.scrolly.min.js")
-      script(src="/assets/js/jquery.scrollex.min.js")
-      script(src="/assets/js/skel.min.js")
-      script(src="/assets/js/util.js")
-      //if lte IE 8
-        script(src="/assets/js/ie/respond.min.js")
-      script(src="/assets/js/main.js")
+      if debug
+        script(src="/assets/js/jquery.min.js")
+      else
+        script(src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous")
+      script(src="/assets/scripts.min.js")

@@ -1,1 +1,1 @@
-require("./core.js")();
+require("./core.js")({ debug: true });
