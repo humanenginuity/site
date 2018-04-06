@@ -54,21 +54,25 @@ function setup(opts, sugar) {
     ])
     .use("metalsmith-permalinks", {
       relative: false,
-    })
-    .use("metalsmith-uglify", {
-      files: [
-        "assets/js/jquery.scrolly.min.js",
-        "assets/js/jquery.scrollex.min.js",
-        "assets/js/skel.min.js",
-        "assets/js/util.js",
-        "assets/js/main.js",
-      ],
-      concat: {
-        root: "assets/"
-      },
-      removeOriginal: true,
-    })
-    ;
+    });
+
+    if (opts.debug) {
+      sugar = sugar
+        .use("metalsmith-uglify", {
+          files: [
+            "assets/js/jquery.scrolly.min.js",
+            "assets/js/jquery.scrollex.min.js",
+            "assets/js/skel.min.js",
+            "assets/js/util.js",
+            "assets/js/main.js",
+          ],
+          concat: {
+            root: "assets/"
+          },
+          removeOriginal: true,
+        })
+        ;
+    }
 
     return opts.after(sugar)
 }
