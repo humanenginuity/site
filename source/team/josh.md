@@ -1,10 +1,11 @@
 ---
 name: Josh Vincent
 image: josh.png
+rank: 4
 social:
   - name: LinkedIn
-    link: "https://www.linkedin.com/in/joshvincent"
     icon: fa-linkedin
+    link: "https://www.linkedin.com/in/joshvincent"
 ---
 Josh has been building software since his computer science days at university. He is a seasoned product manager, designer and entrepreneur. He spent almost a decade shipping products at Microsoft, followed by 3 startups in Silicon Valley. Most recently he worked with the rest of the Human Enginuity team shipping a major payments network for businesses and employees.
 

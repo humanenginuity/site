@@ -1,6 +1,7 @@
 ---
 name: Joe Wasson
 image: joe.png
+rank: 2
 social:
   - name: LinkedIn
     link: "https://www.linkedin.com/in/joewasson"

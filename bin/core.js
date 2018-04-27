@@ -19,7 +19,7 @@ function setup(opts, sugar) {
     .use("metalsmith-collections", {
       team: {
         pattern: "team/*.md",
-        sort: "name"
+        sort: "rank"
       },
       tiles: {
         pattern: "landing-tiles/*.md",

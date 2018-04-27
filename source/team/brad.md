@@ -1,6 +1,7 @@
 ---
 name: Brad Gibson
 image: brad.png
+rank: 1
 social:
   - name: LinkedIn
     link: "https://www.linkedin.com/in/gibsonbrad"

@@ -1,6 +1,7 @@
 ---
 name: Boris Gbahoué
 image: boris.jpg
+rank: 3
 social:
   - name: LinkedIn
     link: "https://www.linkedin.com/in/boris-gbahou%C3%A9-7141a0/"
