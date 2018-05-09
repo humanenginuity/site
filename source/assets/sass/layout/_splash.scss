@@ -1,0 +1,31 @@
+#splash {
+    .inner {
+        @include vendor('display', 'flex');
+        @include vendor('flex-flow', 'row nowrap');
+    }
+
+    .main {
+        @include vendor('display', 'flex');
+        @include vendor('flex-direction', 'column');       
+    }
+
+    .subtitle {
+        @include vendor('display', 'flex');
+        @include vendor('flex-flow', 'row wrap');
+        @include vendor('justify-content', 'center')
+        p {
+            width: 100%;
+        }
+    }
+
+    .logo {
+        width: 40%;
+    }
+
+    .major {
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.6em;
+        width: 70%;
+    }
+}

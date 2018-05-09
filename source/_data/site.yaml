@@ -1,3 +1,7 @@
 title: "Human Enginuity"
 email: "hello@humanenginuity.com"
 tile_links: true
+splash:
+  points:
+    - "Discover how to build __robust and maintainable__ software such that changes and new features __integrate seamlessly__ with the rest of your code."
+    - "__Boost team productivity__ by using __distributed__ source control __effectively__ in a real-world team environment"
